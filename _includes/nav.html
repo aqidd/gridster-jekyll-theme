@@ -10,7 +10,8 @@
                 <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/archive">Archive</a>
                 </li>
-                <li>
+
+                {% comment %} <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/typography">Typography</a>
                 </li>
                 <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
@@ -30,18 +31,12 @@
                     </li>
                     <li>
                         <a href="/page-material-sidebar-left">page material sidebar left</a>
-                    </li>
+                    </li> {% endcomment %}
                 </div>
-                <li>
-                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
-                </li>
             </ul>
         </nav>
         <nav class="iconnav">
             <ul>
-                <li class="sicon">
-                    <a href='#search'><i class='fa fa-search'></i></a>
-                </li>
                 {% if site.tumblr %}
                 <li class="social">
                     <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>

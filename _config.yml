@@ -1,6 +1,6 @@
 full_rebuild: true
-name: Gridster
-description: the material experience for jekyll
+name: Composable Apps
+description: collection of open source apps in docker-compose format
 destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
@@ -8,21 +8,21 @@ permalink: /:title/
 paginate: 8
 paginate_path: /page/:num/
 infinite_scroll: true #change to false if you want to use pagination
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 tag_dir: /tag
 category_dir: /category
 author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: /media/compressed
 author_default_avatar: /profile-pic.jpg
-tumblr: "#"
-pinterest: "#"
-instagram: "#"
+# tumblr: "#"
+# pinterest: "#"
+# instagram: "#"
 twitter: "#"
-facebook: "#"
-youtube: "#"
-vimeo: "#"
-soundcloud: "#"
+# facebook: "#"
+# youtube: "#"
+# vimeo: "#"
+# soundcloud: "#"
 
 encoding: utf-8
 defaults:
