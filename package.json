@@ -15,7 +15,10 @@
     "grunt-newer": "^1.1.0",
     "grunt-open": "^0.2.3",
     "grunt-responsive-images": "^0.1.6",
-    "grunt-sass": "^0.14.2",
     "grunt-shell": "^1.1.1"
+  },
+  "dependencies": {
+    "jpegtran": "^1.0.6",
+    "load-grunt-tasks": "^5.1.0"
   }
 }

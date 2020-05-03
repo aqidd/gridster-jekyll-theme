@@ -95,23 +95,6 @@ module.exports = function (grunt) {
             }
         },
 
-        sass: {
-            options: {
-                outputStyle: 'compressed',
-            },
-            dist: {
-                files: {
-                    'css/main.css': 'sass/main.scss',
-                    'css/grid.css': 'sass/grid.scss',
-                    'css/classic.css': 'sass/classic.scss',
-                    // you may want to remove these for your site
-                    'css/main_brown.css': 'sass/main_brown.scss',
-                    'css/main_green.css': 'sass/main_green.scss',
-                    'css/main_teal.css': 'sass/main_teal.scss'
-                }
-            }
-        },
-
         autoprefixer: {
             options: {
                 browsers: ['> 1%']
@@ -160,10 +143,6 @@ module.exports = function (grunt) {
                 files: ['js/{,*/}{,*/}*.js'],
                 tasks: ["uglify", "copy:js"]
             },
-            css: {
-                files: ["sass/{,*/}{,*/}{,*/}*.scss"],
-                tasks: ["sass", "autoprefixer", "copy:css"]
-            },
             images: {
                 files: ["img/{,*/}{,*/}*.{png,jpg}"],
                 tasks: ["newer:imagemin", "responsive_images", "shell:jekyllBuild", "copy"]
@@ -199,7 +178,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
-    grunt.registerTask("default", ["newer:imagemin", "responsive_images", "uglify", "sass", "autoprefixer", "shell:jekyllBuild", "copy", "open", "watch"]);
-    grunt.registerTask("build", ["imagemin", "responsive_images", "uglify", "sass", "autoprefixer", "shell:jekyllBuild", "copy"]);
+    grunt.registerTask("default", ["newer:imagemin", "responsive_images", "uglify", "autoprefixer", "shell:jekyllBuild", "copy", "open", "watch"]);
+    grunt.registerTask("build", ["imagemin", "responsive_images", "uglify", "autoprefixer", "shell:jekyllBuild", "copy"]);
     grunt.registerTask("deploy", ["buildcontrol:pages"]);
 };
