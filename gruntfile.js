@@ -23,24 +23,24 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            jpg: {
-                options: {
-                    progressive: true
-                },
-                files: [
-                    {
-                        // Set to true to enable the following options…
-                        expand: true,
-                        // cwd is 'current working directory'
-                        cwd: '',
-                        src: ['img/*.jpg', 'img/**/*.jpg', 'img/**/**/*.jpg', 'img/*.jpeg', 'img/**/*.jpeg', 'img/**/**/*.jpeg'],
-                        // Could also match cwd. i.e. project-directory/img/
-                        dest: 'media/compressed/',
-                        flatten: true,
-                        ext: '.jpg'
-                    }
-                ]
-            }
+            // jpg: {
+            //     options: {
+            //         progressive: true
+            //     },
+            //     files: [
+            //         {
+            //             // Set to true to enable the following options…
+            //             expand: true,
+            //             // cwd is 'current working directory'
+            //             cwd: '',
+            //             src: ['img/*.jpg', 'img/**/*.jpg', 'img/**/**/*.jpg', 'img/*.jpeg', 'img/**/*.jpeg', 'img/**/**/*.jpeg'],
+            //             // Could also match cwd. i.e. project-directory/img/
+            //             dest: 'media/compressed/',
+            //             flatten: true,
+            //             ext: '.jpg'
+            //         }
+            //     ]
+            // }
         },
 
         responsive_images: {
